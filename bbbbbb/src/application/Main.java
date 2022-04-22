@@ -24,6 +24,11 @@ public class Main extends Application {
 	
 	@Override
 	public void start (Stage s) {
+		//main
+		Deck d =new Deck();
+		House h=new House();
+		//Card c=new Card();
+//		
 		//background color
 		BackgroundFill background_fill = new BackgroundFill(Color.DARKOLIVEGREEN, CornerRadii.EMPTY, Insets.EMPTY);
 		Background background = new Background(background_fill);
@@ -35,8 +40,11 @@ public class Main extends Application {
 		//
 		
 		//The play scene
+		
 		Pane secondp = new Pane();
 		secondp.setBackground(background);
+		
+		
 		
 		Image backofcard = new Image("backofcard.png");
 		ImageView backcard= new ImageView(backofcard);
@@ -81,7 +89,10 @@ public class Main extends Application {
 		hit.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-			;
+				d.deal(h);
+		      
+
+			
 			}
 			});
 
